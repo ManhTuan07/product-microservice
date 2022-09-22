@@ -4,9 +4,11 @@ import com.tuanit.demomicroservice.dto.ProductRequest;
 import com.tuanit.demomicroservice.dto.ProductResponse;
 import com.tuanit.demomicroservice.service.ProductService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.awt.print.Pageable;
 import java.util.List;
 
 @RestController
