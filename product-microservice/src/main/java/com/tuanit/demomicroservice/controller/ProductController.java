@@ -27,4 +27,10 @@ public class ProductController {
     public List<ProductResponse> getAllProducts(){
         return productService.getAllProducts();
     }
+
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public ProductResponse getOne(@PathVariable("id") Long id){
+        return productService.getOne(id);
+    }
 }

@@ -43,4 +43,11 @@ public class ProductService {
                 .price(product.getPrice())
                 .build();
     }
+
+    public ProductResponse getOne(Long id) {
+
+        Product product = productRepository.findById(id).orElseThrow(() -> new IllegalStateException("Product not found"));
+
+        return mapToProductResponse(product);
+    }
 }
